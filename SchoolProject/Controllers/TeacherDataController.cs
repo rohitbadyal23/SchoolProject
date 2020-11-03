@@ -15,7 +15,7 @@ namespace SchoolProject.Controllers
         // The database context class which allows us to access our MySQL Database.
         private SchoolDbContext School = new SchoolDbContext();
 
-        //This Controller Will access the authors table of our school database.
+        //This Controller Will access the teachers table of our school database.
         /// <summary>
         /// Returns a list of Teachers in the system
         /// </summary>
@@ -62,14 +62,14 @@ namespace SchoolProject.Controllers
                 NewTeacher.EmployeeNumber = EmployeeNumber;
                 NewTeacher.HireDate = HireDate;
                 NewTeacher.Salary = Salary;
-                //Add the Author Name to the List
+                //Add the Teacher Name to the List
                 Teachers.Add(NewTeacher);
             }
 
             //Close the connection between the MySQL Database and the WebServer
             Conn.Close();
 
-            //Return the final list of author names
+            //Return the final list of teacher names
             return Teachers;
         }
 
