@@ -3,10 +3,16 @@
     ViewBag.Title = "List";
 }
 
-<h2>List</h2>
-<p>This page should be showing information about all teachers</p>
+
 <div id="containerlist">
+    <nav>
+        <a class="navlink" href="/Teacher/Add">Add Teacher</a>
+    </nav>
     <h2>List of Teachers</h2>
+    <form action="/Teacher/List" method="GET">
+        <input type="text" name="SearchKey" autocomplete="off" />
+        <input type="submit" value="Search" />
+    </form>
     @foreach (var teacher in Model)
     {
         <div class="list-group-item row">
@@ -15,4 +21,3 @@
 
     }
 </div>
-
