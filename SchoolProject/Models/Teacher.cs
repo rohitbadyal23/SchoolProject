@@ -14,5 +14,8 @@ namespace SchoolProject.Models
         public string EmployeeNumber;
         public DateTime HireDate;
         public decimal Salary;
+
+        //parameter-less constructor function
+        public Teacher() { }
     }
 }
